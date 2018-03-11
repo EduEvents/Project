@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ui",
-    "\\ui\\src",
-    "\\ui\\src\\components"
+    "\\app",
+    "\\app\\controllers",
+    "\\conf",
+    "\\test"
   ],
-  "SelectedNode": "\\ui\\src\\components\\Header.js",
+  "SelectedNode": "\\project",
   "PreviewInSolutionExplorer": false
 }

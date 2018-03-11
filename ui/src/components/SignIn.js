@@ -3,8 +3,8 @@ import React from 'react';
 var style = {
 
   body: {
+    position: 'absolute',
     backgroundColor: 'lightgray',
-    position: 'fixed',
     width: '100%',
     height: '100%'
   },
@@ -19,7 +19,6 @@ var style = {
   },
 
   container: {
-    position: 'absolute',
     top: '50%',
     left: '50%',
   },

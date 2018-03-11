@@ -3,39 +3,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Radium from 'radium';
 
-import './Header.css';
-
+//The css is inline and uses a tool called Radium, which allows effective styling capabilites.
+//Many powerful capabilites such as giving support for :hover, :active, :focus
 var style = {
 
+  body: {
+    position: 'relative',
+    margin: '0',
+    top: '0px',
+    width: '100%',
+    height: '84px',
+    backgroundColor: '#3baf36',
+    overflow: 'hidden'
+  },
+
   brandName: {
-    font: '',
-    position: 'fixed',
-    textDecoration: 'none',
-    paddingTop: '15px',
-    color: 'white',
     float: 'left',
     marginLeft: '350px',
-
-    ":active": {
-      color: 'black'
-    }
-  },
-
-  ul: {
-    listStyleType: 'none',
-    width: '100%',
-    left: '0px',
-    margin: '0 auto',
-    padding: '0',
-    overflow: 'hidden',
-    backgroundColor: '#3baf36',
-  },
-
-  link: {
-    float: 'right',
-    display: 'block',
     textDecoration: 'none',
-    color: 'white',
+    color: 'white'
+  },
+
+  nav: {
+    marginRight: '350px',
+    float: 'right',
+    marginTop: '-16px'
+  },
+
+  list: {
+    listStyleType: 'none',
+    display: 'inline-block',
     padding: '30px 18px',
 
     ":hover": {
@@ -43,22 +40,27 @@ var style = {
     }
   },
 
-  navbar: {
-    marginRight: '350px'
-  },
+  listElement: {
+    textDecoration: 'none',
+    color: 'white',
+    padding: '30px 18px',
+    margin: '-30px -18px'
+  }
 };
 
+//Navigation bar component with styling. This will be rendered for every route page.
+//Components using the same radium style element need unique keys (e.g key="x")!
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <div style={style.body}>
         <nav>
-          <ul style={style.ul}>
-            <li><Link to={"/"} style={style.brandName}><h1>EduEvents</h1></Link></li>
-            <div style={style.navbar}>
-              <li><Link to={"/about"} style={style.link}>About</Link></li>
-              <li><Link to={"/sign_up"} style={style.link}>Sign up</Link></li>
-              <li><Link to={"/sign_in"} style={style.link}>Sign in</Link></li>
+          <Link to={"/"} style={style.brandName}><h1>EduEvents</h1></Link>
+          <ul>
+            <div style={style.nav}>
+              <li key="1" style={style.list}><Link to={"/sign_in"} style={style.listElement}>Sign in</Link></li>
+              <li key="2" style={style.list}><Link to={"/sign_up"} style={style.listElement}>Sign up</Link></li>
+              <li key="3" style={style.list}><Link to={"/about"} style={style.listElement}>About</Link></li>
             </div>
           </ul>
         </nav>

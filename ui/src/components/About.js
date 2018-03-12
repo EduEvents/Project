@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SubHeader from './SubHeader';
+
 const style = {
 
   body: {
@@ -13,7 +15,7 @@ const style = {
 const About = () => {
   return (
     <div style={style.body}>
-      <h3>About</h3>
+      <SubHeader subheader="About" />
     </div>
   );
 }

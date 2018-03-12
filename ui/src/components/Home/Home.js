@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SubHeader from '../SubHeader';
 import EventDisplay from './EventDisplay';
 
 const style = {
@@ -9,28 +10,19 @@ const style = {
     backgroundColor: 'lightgray',
     width: '100%',
     height: '100vh'
-  },
-
-  headlineContainer: {
-    backgroundColor: '#999999',
-    height: '100px',
-  },
-
-  headline: {
-    color: 'white',
-    position: 'relative',
-    marginLeft: '350px',
-    top: '35%'
   }
 }
 
 class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div style={style.body}>
-        <div style={style.headlineContainer}>
-          <h4 style={style.headline}>A tool for easier learning</h4>
-        </div>
+        <SubHeader subheader="A tool for easier learning" />
         <EventDisplay />
       </div>
     );

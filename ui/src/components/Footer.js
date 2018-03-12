@@ -4,10 +4,9 @@ const style = {
 
   body: {
     position: 'relative',
-    top: '100%',
+    bottom: '0px',
     height: '60px',
     width: '100%',
-    margin: 'auto',
     backgroundColor: 'black'
   },
 

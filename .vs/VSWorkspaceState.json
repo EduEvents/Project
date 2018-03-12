@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\controllers",
-    "\\conf",
-    "\\test"
+    "\\ui",
+    "\\ui\\src",
+    "\\ui\\src\\components",
+    "\\ui\\src\\components\\Home"
   ],
-  "SelectedNode": "\\project",
+  "SelectedNode": "\\ui\\src\\components\\Footer.js",
   "PreviewInSolutionExplorer": false
 }

@@ -12,12 +12,40 @@ import About from "./components/About";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 
-import './App.css';
+//Components to be rendered
+//Root renders a header and footer, where children can be passed as parameters.
+const home = () => {
+  return (
+    <Root>
+      <Home />
+    </Root>
+  );
+}
 
-const Tech = ({ match }) => {
-  return <div>Current Route: {match.params.test}</div>
-};
+const signIn = () => {
+  return (
+    <Root>
+      <SignIn />
+    </Root>
+  );
+}
 
+const signUp = () => {
+  return (
+    <Root>
+      <SignUp />
+    </Root>
+  );
+}
+
+const about = () => {
+  return (
+    <Root>
+      <About />
+    </Root>
+  );
+}
+//---
 
 class App extends Component {
   constructor(props) {
@@ -27,15 +55,15 @@ class App extends Component {
     };
   }
 
+  //Routing set-up
   render() {
     return (
       <Router>
         <div>
-          <Route path="/" component={Root}/>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path="/sign_in" component={SignIn}/>
-          <Route exact path="/sign_up" component={SignUp}/>
+          <Route exact path="/" component={home} />
+          <Route exact path="/sign_in" component={signIn} />
+          <Route exact path="/sign_up" component={signUp} />
+          <Route exact path="/about" component={about} />
         </div>
       </Router>
     );

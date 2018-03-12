@@ -3,10 +3,10 @@ import React from 'react';
 const style = {
 
   body: {
-    position: 'absolute',
+    position: 'relative',
     backgroundColor: 'lightgray',
     width: '100%',
-    height: '100%',
+    height: '100vh'
   }
 }
 

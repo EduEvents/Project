@@ -3,17 +3,16 @@ import React from 'react';
 var style = {
 
   body: {
-    position: 'absolute',
+    position: 'relative',
     backgroundColor: 'lightgray',
     width: '100%',
-    height: '100%'
+    height: '100vh'
   },
 
   box: {
     margin: '0 auto',
     width: '700px',
     height: '400px',
-    position: 'relative',
     top: '20%',
     border: 'solid 2px black'
   },
